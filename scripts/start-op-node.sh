@@ -32,4 +32,5 @@ exec op-node \
   --metrics.addr=0.0.0.0 \
   --metrics.port=7000 \
   --syncmode=execution-layer \
+  --l2.enginekind=reth \
   $EXTENDED_ARG $@

@@ -42,10 +42,11 @@ services:
       - op_geth:/geth
       - ./.upgrade-pectra:/upgrade-pectra
     ports:
-      - ${PORT__OP_GETH_HTTP:-9993}:8545
+      - ${PORT__OP_GETH_HTTP:-9995}:8545
       - ${PORT__OP_GETH_WS:-9994}:8546
       - ${PORT__OP_GETH_P2P:-39393}:${PORT__OP_GETH_P2P:-39393}/udp
       - ${PORT__OP_GETH_P2P:-39393}:${PORT__OP_GETH_P2P:-39393}/tcp
+      - 7100:7100
     extra_hosts:
       - "host.docker.internal:host-gateway"
 
@@ -66,6 +67,7 @@ services:
       - ${PORT__OP_NODE_P2P:-9003}:9003/udp
       - ${PORT__OP_NODE_P2P:-9003}:9003/tcp
       - ${PORT__OP_NODE_HTTP:-9545}:9545
+      - 7000:7000
     extra_hosts:
       - "host.docker.internal:host-gateway"
 

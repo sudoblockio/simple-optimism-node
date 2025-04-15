@@ -48,7 +48,7 @@ exec geth \
   --ws.port=8546 \
   --ws.origins="*" \
   --ws.api=debug,eth,txpool,net,engine,web3 \
-  --metrics.enabled \
+  --metrics \
   --metrics.addr=0.0.0.0 \
   --metrics.port=7100 \
   --syncmode="$OP_GETH__SYNCMODE" \
