@@ -30,6 +30,6 @@ exec op-node \
   --l1.beacon=$OP_NODE__L1_BEACON \
   --metrics.enabled \
   --metrics.addr=0.0.0.0 \
-  --metrics.port=7300 \
+  --metrics.port=7000 \
   --syncmode=execution-layer \
   $EXTENDED_ARG $@

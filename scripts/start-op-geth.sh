@@ -48,10 +48,9 @@ exec geth \
   --ws.port=8546 \
   --ws.origins="*" \
   --ws.api=debug,eth,txpool,net,engine,web3 \
-  --metrics \
-  --metrics.influxdb \
-  --metrics.influxdb.endpoint=http://influxdb:8086 \
-  --metrics.influxdb.database=opgeth \
+  --metrics.enabled \
+  --metrics.addr=0.0.0.0 \
+  --metrics.port=7100 \
   --syncmode="$OP_GETH__SYNCMODE" \
   --gcmode="$NODE_TYPE" \
   --authrpc.vhosts="*" \
